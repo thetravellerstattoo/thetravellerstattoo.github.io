@@ -1,0 +1,12 @@
+@font-face { font-family: PingFang; src: url("PingFangMO-Semibold.woff2") format('woff2'); } 
+
+* {
+    font-family: PingFang;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+}
+a {
+    font-size: 20px;
+}

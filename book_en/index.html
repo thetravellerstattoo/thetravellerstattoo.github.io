@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+        <meta name="description" content="The Travellers Tattoo in Catania - Book a tattoo appointment with us today.">
+        <meta name="keywords" content="Tattoo, Tattoo Artists, Piercing, Catania, The Travellers, Tattoo Studio, Prenota Tatuaggi, Book Tattoo, Tattoo Catania, Tatuaggi, Piercing, Artisti, Arte">
+        <meta name="author" content="The Travellers Tattoo">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="The Travellers Tattoo">
+        <meta property="og:description" content="Learn about our work, where we're located and much more.">
+        <meta property="og:image" content="/static/img/logo.webp">
+        <meta property="og:url" content="/">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>The Travellers</title>
+
+        <link rel="stylesheet" href="/static/style.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+    </head>
+
+    <body class="relative min-h-screen bg-cover bg-center 
+    bg-[url('/static/img/background_mobile.webp')] 
+    md:bg-[url('/static/img/background_nolog.webp')]">
+
+        <nav class="relative z-10 bg-[#0b481c]">
+            <div class="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between p-4">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="/static/img/logo.webp" class="h-12 sm:h-16" alt="The Travellers Tattoo Logo">
+                    <span class="text-white text-xl sm:text-3xl font-semibold whitespace-nowrap">THE TRAVELLERS</span>
+                </a>
+                <a href="/book_it">
+                    <span class="w-12 fi fi-it"></span>
+                </a>
+                <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-white md:hidden focus:outline-none focus:ring-2 focus:ring-white" aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="flex flex-col md:flex-row md:space-x-8 font-medium mt-4 md:mt-0">
+                        <li><a href="/#our-artists" class="transition delay-150 duration-300 ease-in-out block py-2 md:py-0 text-white hover:text-yellow-500">I nostri artisti</a></li>
+                        <li><a href="/#gallery" class="transition delay-150 duration-300 ease-in-out block py-2 md:py-0 text-white hover:text-yellow-500">Galleria</a></li>
+                        <li><a href="/book" class="transition delay-150 duration-300 ease-in-out block py-2 md:py-0 text-white hover:text-yellow-500">Prenota</a></li>
+                        <li class="flex items-center">
+                            <a href="https://www.instagram.com/thetravellerstattoo/" class="transition delay-150 duration-300 ease-in-out text-white hover:text-yellow-500" aria-label="Instagram">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.75 2C4.574 2 2 4.574 2 7.75v8.5C2 19.426 4.574 22 7.75 22h8.5C19.426 22 22 19.426 22 16.25v-8.5C22 4.574 19.426 2 16.25 2h-8.5zM12 7.25a4.75 4.75 0 1 1 0 9.5 4.75 4.75 0 0 1 0-9.5zm0 1.5a3.25 3.25 0 1 0 0 6.5 3.25 3.25 0 0 0 0-6.5zm5.25-.75a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                                </svg>
+                            </a>
+                        </li>                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="failModal" tabindex="1" class="hidden fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+            <div class="relative p-4 w-full max-w-md">
+                <div class="relative p-4 text-center bg-[#0b481c] text-white rounded-lg shadow sm:p-5">
+                    <button type="button" class="absolute top-2.5 right-2.5 text-white hover:text-yellow-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="document.getElementById('successModal').style.display='none'">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                        <svg class="w-8 h-8 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.366-.446.957-.631 1.505-.488.548.143.988.547 1.184 1.077l1.342 3.447 3.447 1.342c.53.196.934.636 1.077 1.184.143.548-.042 1.139-.488 1.505l-2.665 2.12.48 3.445c.078.56-.138 1.123-.573 1.514a1.4 1.4 0 01-1.51.231L10 17.29l-2.577 1.186a1.4 1.4 0 01-1.51-.23c-.435-.392-.65-.955-.573-1.516l.48-3.444-2.665-2.12a1.399 1.399 0 01-.487-1.505 1.4 1.4 0 011.077-1.184l3.447-1.342 1.342-3.447a1.399 1.399 0 011.184-1.077c.548-.143 1.139.042 1.505.488z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <p class="mb-4 text-lg font-semibold">Something went wrong, try again later</p>
+                    <button type="button" onclick="document.getElementById('successModal').style.display='none'" class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-yellow-600 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="successModal" tabindex="1" class="hidden fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+            <div class="relative p-4 w-full max-w-md">
+                <div class="relative p-4 text-center bg-[#0b481c] text-white rounded-lg shadow sm:p-5">
+                    <button type="button" class="absolute top-2.5 right-2.5 text-white hover:text-yellow-500 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" onclick="document.getElementById('successModal').style.display='none'">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <div class="w-12 h-12 rounded-full bg-green-100 dark:bg-green-900 p-2 flex items-center justify-center mx-auto mb-3.5">
+                        <svg class="w-8 h-8 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <p class="mb-4 text-lg font-semibold">Request sent successfully!</p>
+                    <button type="button" onclick="document.getElementById('successModal').style.display='none'" class="py-2 px-3 text-sm font-medium text-center text-white rounded-lg bg-yellow-600 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300">Continue</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-16 mx-4 sm:mx-auto sm:max-w-2xl px-4 sm:px-8 text-white rounded-lg shadow-sm bg-[#0b481c]">
+            <div class="py-8 lg:py-12 px-4 sm:px-8">
+                <h2 class="mb-6 text-3xl sm:text-4xl tracking-tight font-extrabold text-center text-white">Book an Appointment</h2>
+                <form id="booking-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium">Name</label>
+                        <input name="name" type="text" id="name" class="shadow-sm bg-white border border-gray-100 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium">E-Mail</label>
+                        <input name="email" ntype="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-600 focus:border-green-600 block w-full p-2.5" placeholder="name@example.com" required>
+                    </div>
+        
+                    <fieldset>
+                        <legend class="block mb-2 text-sm font-medium">Appointment Type</legend>
+                        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+                            <label class="flex items-center p-2 border border-white rounded-lg">
+                                <input type="radio" name="appointment_type" value="tattoo" class="mr-2">
+                                <span class="text-sm text-white">Tattoo</span>
+                            </label>
+                            <label class="flex items-center p-2 border border-white rounded-lg">
+                                <input type="radio" name="appointment_type" value="piercing" class="mr-2">
+                                <span class="text-sm text-white">Piercing</span>
+                            </label>
+                        </div>
+                    </fieldset>
+        
+                    <div>
+                        <label for="description" class="block mb-2 text-sm font-medium">Description</label>
+                        <textarea name="description" id="description" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-600 focus:border-green-600" placeholder="Tell us more..."></textarea>
+                    </div>
+
+                    <div>
+                        <label for="artist" class="block mb-2 text-sm font-medium">Preferred Artist</label>
+                        <select id="artist" name="artist" class="block w-full p-2.5 text-sm text-gray-900 bg-white border border-gray-300 rounded-lg focus:ring-green-600 focus:border-green-600">
+                            <option value="">-- Select an artist --</option>
+                            <option value="indifferente">Indifferent</option>
+                            <option value="ale">Alessandro Ax Lanzafame</option>
+                            <option value="ema">Emmanuele Spampinato</option>
+                            <option value="luigi">Luigi Marcantonio</option>
+                        </select>   
+                    </div>            
+                    <div class="pt-0">
+                        <p class="mt-0 mb-2 text-sm text-yellow-100 font-semibold text-center">
+                            Every appointment requires a <span class="underline">deposit of 50 EUR</span>.
+                        </p>
+                        <button id="submit" type="submit" class="w-full py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-yellow-600 hover:bg-yellow-800">
+                            Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>    
+        
+        <script>
+            const toggleButton = document.getElementById('menu-toggle');
+            const navMenu = document.getElementById('navbar-default');
+
+            toggleButton.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+            });
+        </script>
+
+
+    <script>
+        document.getElementById("booking-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById("submit");
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+
+            const data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                appointment_type: document.querySelector("input[name='appointment_type']:checked")?.value || "",
+                description: document.getElementById("description").value,
+                artist: document.getElementById("artist").value
+            };
+
+            try {
+                const res = await fetch("https://api.thetravellerscatania.workers.dev", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (!res.ok) throw new Error("Failed");
+
+                document.getElementById("successModal").classList.remove("hidden");
+            } catch (err) {
+                document.getElementById("failureModal").classList.remove("hidden");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Sent";
+            }
+        });
+    </script>
+
+    <footer class="bg-black bg-opacity-70 p-4 text-center text-white">
+        <p>&copy; 2025 The Travellers Tattoo. All rights reserved.</p>
+    </footer>
+
+    </body>
+</html>
